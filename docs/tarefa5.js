@@ -1,10 +1,10 @@
 
 function mostrarPrompt() {
 
-    let Frutas = []
-    let Laticínios = []
-    let Congelados = []
-    let Doces = []
+    let frutas = []
+    let laticinios = []
+    let congelados = []
+    let doces = []
     let comida = ""
     let categoria = ""
 
@@ -25,9 +25,19 @@ function mostrarPrompt() {
         categoria = prompt("Em qual categoria essa comida se encaixa: frutas, laticínios, congelados ou doces?");
 
         if (categoria === "frutas") {
-            Frutas.push(comida)
+            frutas.push(comida)
+        } else if (categoria === "laticínios") {
+            laticinios.push(comida)
+        } else if (categoria === "congelados") {
+            congelados.push(comida)
+        } else if (categoria === "doces") {
+            doces.push(comida)
+        } else {
+            alert("Categoria inválida.")
         }
+
     }
+    alert(`Lista de compras:\n Frutas: ${frutas}\n Laticínios: ${laticinios}\n Congelados: ${congelados}\n Doces: ${doces}`);
 }
 
 mostrarPrompt();
